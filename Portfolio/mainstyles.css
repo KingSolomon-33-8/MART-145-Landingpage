@@ -1,0 +1,71 @@
+body {
+	background-color: #404040;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-image: URL("Images/IMG_elkhorns.jpg");
+	background-size: 1500px 200px;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	text-align: center;
+	color: #F386B9;
+	margin-bottom: 100px;
+	font-size: 80px;
+	font-family: Courier New, monospace;
+}
+
+h2 {
+	text-align: center;
+	color: #DD9CDA;
+}
+
+hr {
+	border: none;
+	background-color: #F556F2;
+	height: 3px;
+}
+
+pre {
+	
+}
+
+p {
+	text-align: center;
+	line-height: 2.0;
+	color: #FFFFFF;
+}
+a:link {
+	color: #F8BAD6;
+}
+
+a:visited {
+	color: #F779FB;
+}
+
+a:hover {
+    color: #EB3887;
+}
+
+a:active {
+    color: #EB3887;
+}
+ul {
+
+}
+
+ul li a {
+ 
+}
+
+ul li a:hover {
+  
+}
+
+img {
+	
+}
+
+li {
+	
+}
+

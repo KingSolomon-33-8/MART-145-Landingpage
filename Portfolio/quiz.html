@@ -1,0 +1,190 @@
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Which Deer are you?</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+p {
+	font-family: ;
+	font-size: 16px;
+	line-height: 2.0;
+	text-index: none;
+	border: none;
+	outline: none;
+	margin: 0px;  
+	padding: none;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+</style>
+<h1>Which Deer are you?</h1>
+	<p>Choose your favorite color palette:</p>	
+<form>
+<div class="radiogroup">
+	<label class="radio">
+		<input type="radio" id="dark" name="fav_colorpalette" value="Mule_Deer">
+		<span class="custom"></span>
+		Dark
+	</label>
+
+	<label class="radio">
+		<input type="radio" id="light" name="fav_colorpalette" value="Whitetail_Deer">
+		<span class="custom"></span>
+		Light
+	</label>
+
+	<label class="radio">
+		<input type="radio" id="both" name="fav_colorpalette" value="Elk">
+		<span class="custom"></span>
+		Both
+	</label>
+</div>
+<hr>
+
+
+	<p>Choose your favorite place to be:</p>
+<div class="radiogroup">
+	<label class="radio">
+		<input type="radio" id="hills" name="fav_placetobe" value="Mule_Deer">
+		<span class="custom"></span>
+		Hills
+	</label>
+	
+	<label class="radio">
+		<input type="radio" id="forest" name="fav_placetobe" value="Whitetail_Deer">
+		<span class="custom"></span>
+		Forest
+	</label>
+	  
+	<label class="radio">
+		<input type="radio" id="mountains" name="fav_placetobe" value="Elk">
+		<span class="custom"></span>
+		Mountains
+	</label>
+</div>
+<hr>
+
+	<p>Choose your favorite tree:</p>
+<div class="radiogroup">
+	<label class="radio">
+		<input type="radio" id="ponderosa" name="fav_tree" value="Mule_Deer">
+		<span class="custom"></span>
+		Ponderosa
+	</label>
+	<label class="radio">
+		<input type="radio" id="aspen" name="fav_tree" value="Whitetail_Deer">
+		<span class="custom"></span>
+		Aspen
+	</label>
+	<label class="radio">
+		<input type="radio" id="douglas_fir" name="fav_tree" value="Elk">
+		<span class="custom"></span>
+		Douglas Fir
+	</label>
+</div>
+<hr>
+
+	<p>What would you do if you saw a bear?:</p>
+<div class="radiogroup">
+	<label class="radio">
+		<input type="radio" id="bound_away" name="survival_instinct" value="Mule_Deer">
+		<span class="custom"></span>
+		Bound away
+	</label>
+	<label class="radio">
+		<input type="radio" id="run" name="survival_instinct" value="Whitetail_Deer">
+		<span class="custom"></span>
+		RUN
+		</label>
+	<label class="radio">
+		<input type="radio" id="skedaddle" name="survival_instinct" value="Elk">
+		<span class="custom"></span>
+		Skedaddle
+	</label>
+</div>
+<hr>
+
+	<p>Which month is the best?:</p>
+<div class="radiogroup">
+	<label class="radio">
+		<input type="radio" id="october" name="best_month" value="Mule_Deer">
+		<span class="custom"></span>
+		October
+		</label>
+	<label class="radio">
+		<input type="radio" id="november" name="best_month" value="Whitetail_Deer">
+		<span class="custom"></span>
+		November
+		</label>
+	<label class="radio">
+		<input type="radio" id="september" name="best_month" value="Elk">
+		<span class="custom"></span>
+		September
+	</label>
+</div>
+<hr>
+
+	<p>Choose a nickname:</p>
+<div class="radiogroup">
+	<label class="radio">
+		<input type="radio" id="muley" name="nickname" value="Mule_Deer">
+		<span class="custom"></span>
+		Muley
+	</label>
+	<label class="radio">
+		<input type="radio" id="mrperfect" name="nickname" value="Whitetail_Deer">
+		<span class="custom"></span>
+		Mrperfect
+	</label>
+	<label class="radio">
+		<input type="radio" id="stinky" name="nickname" value="Elk">
+		<span class="custom"></span>
+		Stinky
+	</label>
+</div>
+<hr>
+
+  <div class= "quizbutton">
+	<button type="button" onclick="calculateResult()">See My Deer</button>
+  </div>
+<hr>
+</form>
+
+<script>
+function calculateResult() {
+    let Mule_Deer = 0;
+    let Whitetail_Deer = 0;
+    let Elk = 0;
+
+    const answers = document.querySelectorAll('input[type="radio"]:checked');
+
+    answers.forEach(answer => {
+        if (answer.value === "Mule_Deer") Mule_Deer++;
+        if (answer.value === "Whitetail_Deer") Whitetail_Deer++;
+        if (answer.value === "Elk") Elk++;
+    });
+
+    if (Mule_Deer > Whitetail_Deer && Mule_Deer > Elk) {
+        window.location.href = "mule.html";
+		return;
+    }
+    else if (Whitetail_Deer > Mule_Deer && Whitetail_Deer > Elk) {
+        window.location.href = "whitetail.html";
+        return;
+    }
+    else if (Elk > Mule_Deer && Elk > Whitetail_Deer) {
+        window.location.href = "elk.html";
+        return;
+    }
+    else {
+        window.location.href = "mixed.html"; 
+        return;
+    }
+}
+</script>
+</body>
+</html>
